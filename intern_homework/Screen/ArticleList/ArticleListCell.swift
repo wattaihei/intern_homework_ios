@@ -17,7 +17,7 @@ final class ArticleListCell: UITableViewCell {
     
     func set(_ article: Article) {
         titleTextLabel.text = article.title
-        descriptionTextLabel.text = "LGTM: " + String(article.likesCount)
+        descriptionTextLabel.text = "LGTM: " + String(format: "%3d", article.likesCount) + "   Date: " + article.createdAt.prefix(10)
         
         if let urlString = article.user?.profileImageUrl,
             let url = URL(string: urlString) {
