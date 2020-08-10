@@ -8,7 +8,8 @@
 
 import UIKit
 
-final class SearchViewController: UIViewController {
+final class SearchViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var errorMessageLabel: UILabel!
     @IBOutlet weak var searchButton: UIButton!
@@ -30,6 +31,17 @@ final class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         errorMessageLabel.isHidden = true
+        textBox.delegate = self
+    }
+    
+    // close keyboard when pushed "Done"
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textBox.resignFirstResponder()
+        return true
+    }
+    // close keyboard when tapped screen
+    @IBAction func tapScreen(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     
     private func searchArticles() {

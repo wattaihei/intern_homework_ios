@@ -34,7 +34,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キーワードを入力して検索" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vd7-Mb-b9g" userLabel="TextBox">
                                 <rect key="frame" x="107.5" y="279" width="199.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cxe-fY-RcJ">
                                 <rect key="frame" x="191.5" y="433" width="31" height="30"/>
@@ -51,6 +51,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Cxe-fY-RcJ" firstAttribute="top" secondItem="vd7-Mb-b9g" secondAttribute="bottom" constant="120" id="7QP-4A-kUZ"/>
                             <constraint firstItem="WHy-sc-SCp" firstAttribute="centerX" secondItem="qxu-Wy-9lV" secondAttribute="centerX" id="7lE-fi-8Z0"/>
@@ -60,15 +61,23 @@
                             <constraint firstItem="vd7-Mb-b9g" firstAttribute="centerX" secondItem="qxu-Wy-9lV" secondAttribute="centerX" id="lCg-ID-2ZE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BlM-CW-RsA"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="E2G-sN-FcG" appends="YES" id="geg-W0-ees"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="記事検索" id="BH1-1p-sSP" userLabel="記事検索"/>
                     <connections>
                         <outlet property="errorMessageLabel" destination="WHy-sc-SCp" id="Vma-C9-kTr"/>
                         <outlet property="searchButton" destination="Cxe-fY-RcJ" id="KCF-XL-gUX"/>
-                        <outlet property="textBox" destination="vd7-Mb-b9g" id="kSg-gy-jfO"/>
+                        <outlet property="textBox" destination="vd7-Mb-b9g" id="bRP-be-trX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MzT-0x-ska" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="E2G-sN-FcG">
+                    <connections>
+                        <action selector="tapScreen:" destination="Uzo-gg-FYz" id="ZJM-8f-xIo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="8.6956521739130448" y="-98.4375"/>
         </scene>
