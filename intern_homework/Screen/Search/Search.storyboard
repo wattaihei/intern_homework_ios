@@ -28,13 +28,11 @@
         <scene sceneID="D6Y-W3-yUM">
             <objects>
                 <viewController id="Uzo-gg-FYz" userLabel="Search" customClass="SearchViewController" customModule="intern_homework" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qxu-Wy-9lV" customClass="Search">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxu-Wy-9lV" customClass="Search">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キーワードを入力して検索" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vd7-Mb-b9g" userLabel="TextBox">
-                                <rect key="frame" x="103" y="276" width="204" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キーワードを入力して検索" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vd7-Mb-b9g" userLabel="TextBox">
+                                <rect key="frame" x="107.5" y="279" width="199.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -48,8 +46,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Cxe-fY-RcJ" firstAttribute="top" secondItem="vd7-Mb-b9g" secondAttribute="bottom" constant="120" id="7QP-4A-kUZ"/>
                             <constraint firstItem="Cxe-fY-RcJ" firstAttribute="centerY" secondItem="qxu-Wy-9lV" secondAttribute="centerY" id="Gr8-vM-yrJ"/>
                             <constraint firstItem="Cxe-fY-RcJ" firstAttribute="centerX" secondItem="qxu-Wy-9lV" secondAttribute="centerX" id="fvI-Rx-bKK"/>
+                            <constraint firstItem="vd7-Mb-b9g" firstAttribute="centerX" secondItem="qxu-Wy-9lV" secondAttribute="centerX" id="lCg-ID-2ZE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BlM-CW-RsA"/>
                     </view>

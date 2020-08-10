@@ -16,6 +16,16 @@ final class SearchViewController: UIViewController {
         searchArticles()
     }
     
+    // make button rich
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        searchButton.frame = CGRect(x: (self.view.frame.size.width / 2) - 50, y: (self.view.frame.size.height / 2) - 15, width: 100, height: 30)
+        searchButton.tintColor = UIColor.black
+        searchButton.backgroundColor = UIColor.cyan
+        searchButton.layer.borderColor = UIColor.gray.cgColor
+        searchButton.layer.borderWidth = 5.0
+    }
+    
     private func searchArticles() {
         searchButton.isEnabled = false
         
