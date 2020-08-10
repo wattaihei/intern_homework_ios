@@ -43,11 +43,19 @@
                                     <action selector="searchButtonTapped:" destination="Uzo-gg-FYz" eventType="touchUpInside" id="qRA-4l-Jz7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHy-sc-SCp">
+                                <rect key="frame" x="188" y="533" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Cxe-fY-RcJ" firstAttribute="top" secondItem="vd7-Mb-b9g" secondAttribute="bottom" constant="120" id="7QP-4A-kUZ"/>
+                            <constraint firstItem="WHy-sc-SCp" firstAttribute="centerX" secondItem="qxu-Wy-9lV" secondAttribute="centerX" id="7lE-fi-8Z0"/>
                             <constraint firstItem="Cxe-fY-RcJ" firstAttribute="centerY" secondItem="qxu-Wy-9lV" secondAttribute="centerY" id="Gr8-vM-yrJ"/>
+                            <constraint firstItem="WHy-sc-SCp" firstAttribute="top" secondItem="Cxe-fY-RcJ" secondAttribute="bottom" constant="70" id="NIj-W4-SFa"/>
                             <constraint firstItem="Cxe-fY-RcJ" firstAttribute="centerX" secondItem="qxu-Wy-9lV" secondAttribute="centerX" id="fvI-Rx-bKK"/>
                             <constraint firstItem="vd7-Mb-b9g" firstAttribute="centerX" secondItem="qxu-Wy-9lV" secondAttribute="centerX" id="lCg-ID-2ZE"/>
                         </constraints>
@@ -55,6 +63,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="記事検索" id="BH1-1p-sSP" userLabel="記事検索"/>
                     <connections>
+                        <outlet property="errorMessageLabel" destination="WHy-sc-SCp" id="Vma-C9-kTr"/>
                         <outlet property="searchButton" destination="Cxe-fY-RcJ" id="KCF-XL-gUX"/>
                         <outlet property="textBox" destination="vd7-Mb-b9g" id="kSg-gy-jfO"/>
                     </connections>

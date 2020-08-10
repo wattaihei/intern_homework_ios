@@ -10,6 +10,7 @@ import UIKit
 
 final class SearchViewController: UIViewController {
     @IBOutlet weak var textBox: UITextField!
+    @IBOutlet weak var errorMessageLabel: UILabel!
     @IBOutlet weak var searchButton: UIButton!
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
@@ -26,10 +27,18 @@ final class SearchViewController: UIViewController {
         searchButton.layer.borderWidth = 5.0
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        errorMessageLabel.isHidden = true
+    }
+    
     private func searchArticles() {
         searchButton.isEnabled = false
+        errorMessageLabel.isHidden = true
         
         guard let text = textBox.text, !text.isEmpty else {
+            errorMessageLabel.isHidden = false
+            errorMessageLabel.text = "検索ワードを入力してください"
             searchButton.isEnabled = true
             return
         }
