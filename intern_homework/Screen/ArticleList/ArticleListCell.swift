@@ -19,6 +19,9 @@ final class ArticleListCell: UITableViewCell {
         titleTextLabel.text = article.title
         descriptionTextLabel.text = "LGTM: " + String(format: "%3d", article.likesCount) + "   Date: " + article.createdAt.prefix(10)
         
+        titleTextLabel.textColor = UIColor.blue
+        descriptionTextLabel.textColor = UIColor.systemBlue
+        
         if let urlString = article.user?.profileImageUrl,
             let url = URL(string: urlString) {
             Nuke.loadImage(with: url, into: userImageView)
